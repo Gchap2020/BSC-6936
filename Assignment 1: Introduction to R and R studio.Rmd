@@ -1,0 +1,70 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+
+
+## Question 1:
+Assign a set of number to variable x
+```{r}
+x<-seq(-50,50,length=20)
+is.vector(x)
+x
+```
+
+## Question 2
+print 3rd and 6th element with a single command.
+```{r}
+x[3]
+x[6]
+
+```
+
+
+## Question 3
+
+print all elements of x that are non-negative.
+```{r}
+x[x>0]
+
+```
+
+## Question 4
+change last value of x to a different number. change 2nd, 6th and 10th value of x to 1,2 and 3 with single command.
+```{r}
+x[100]<-60
+x[2]<-1
+x[6]<-2
+x[10]<-3
+x[100]
+x[2]
+x[6]
+x[10]
+
+```
+## Question 5
+For each of the following examples determine why the code does not work and correct it. Use R's built in help functions if you have trouble on the second set.
+
+Answer: The elements in vectors are homogenous and holds elements of same type. Vectors cannot have both numeric and logical element at same time. It will automatically change all elements(including the numbers) to logical value. 
+
+
+```{r}
+x<-c(2,34,61,21,NA ,32)
+x[is.na(x)]<-0
+y<-c(5,56,789,23,3,90)
+z <- mean(x*y)
+z
+```
+```{r}
+#my_variable<- 10
+#my_var1able
+```
+The pound or hash is used to comment 
+the line in R. In above variable, the name within the chunk is different so r cannot call the variable.The code will run with the following updates.
+
+```{r}
+my_variable<- 10
+my_variable
+```
